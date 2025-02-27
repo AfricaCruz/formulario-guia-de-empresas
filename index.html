@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Empresas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url(laguardia.jpg) no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 36px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 598px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-group button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+      <script src="script.js"></script>
+</head>
+<body>
+       <script src="script.js"></script>
+    <div class="form-container">
+        <h2 style="text-align: center;">Solicitud de Empresas</h2>
+        <form>
+            <div class="form-group">
+                <label for="empresa">Nombre de la Empresa</label>
+                <input type="text" id="empresa" name="empresa" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="cif">CIF</label>
+                <input type="text" id="cif" name="cif" required pattern="[A-Z0-9]{9}" title="Introduce un CIF válido (9 caracteres, letras y números)">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono móvil</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required title="Introduce un número de 9 dígitos">
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
